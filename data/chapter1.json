@@ -127,14 +127,15 @@
     "number": 10,
     "chapter": 1,
     "type": "mcq",
+    "question": "_____ is the measure of the electrochemical difference between two electrodes in an electrolyte",
     "options": {
       "A": "current",
       "B": "resistance",
       "C": "error",
       "D": "ohms",
-      "E": "ohms-cm"
+      "E": "ohms-cm",
+      "F": "voltage"
     },
-    "question": "_____ is the measure of the electrochemical difference between two electrodes in an electrolyte F) voltage",
     "answer": "F"
   },
   {
@@ -261,7 +262,7 @@
       "D": "equal, anode, cathode"
     },
     "question": "Electromotive force (emf), is ____ in sign and magnitude to the electrode potential of the ___ less the electrode potential of the ____.",
-    "answer": "D"
+    "answer": "C"
   },
   {
     "id": "ch1_q20",
@@ -378,7 +379,7 @@
       "A": "lower, less active",
       "B": "higher, less active",
       "C": "lower, more active",
-      "D": "higher, less active"
+      "D": "higher, more active"
     },
     "question": "The ____ the concentration of metal ions in the electrolyte, the ____ the metal.",
     "answer": "B"
@@ -583,8 +584,8 @@
     "chapter": 1,
     "type": "mcq",
     "options": {
-      "A": "inproporinate, current",
-      "B": "inproporinate, voltage",
+      "A": "inproportionate, current",
+      "B": "inproportionate, voltage",
       "C": "proportional, voltage",
       "D": "proportional, current"
     },
@@ -801,10 +802,10 @@
       "A": "lowers, drops, decreases",
       "B": "increases, increases, decreases",
       "C": "lowers, increases, decreases",
-      "D": "lowers, drops, decreases"
+      "D": "increases, decreases, decreases"
     },
     "question": "Polarization _____ the potential difference between the anode and the cathode and by Ohm's Law, the current ___ and the corrosion rate ____ until an equilibrium is reached",
-    "answer": "D"
+    "answer": "A"
   },
   {
     "id": "ch1_q59",
@@ -965,7 +966,7 @@
       "D": "decreases, increases"
     },
     "question": "As polarization ____ , current _____",
-    "answer": "C"
+    "answer": "A"
   },
   {
     "id": "ch1_q71",
