@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>CP2 Practice Questions</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "background": "#0b1326",
+            "surface": "#0b1326",
+            "surface-dim": "#0b1326",
+            "surface-bright": "#31394d",
+            "surface-container-lowest": "#060e20",
+            "surface-container-low": "#131b2e",
+            "surface-container": "#171f33",
+            "surface-container-high": "#222a3d",
+            "surface-container-highest": "#2d3449",
+            "surface-variant": "#2d3449",
+            "surface-tint": "#7bd0ff",
+            "on-surface": "#dae2fd",
+            "on-surface-variant": "#bdc8d1",
+            "on-background": "#dae2fd",
+            "primary": "#8ed5ff",
+            "primary-container": "#38bdf8",
+            "primary-fixed": "#c4e7ff",
+            "primary-fixed-dim": "#7bd0ff",
+            "on-primary": "#00354a",
+            "on-primary-container": "#004965",
+            "on-primary-fixed": "#001e2c",
+            "on-primary-fixed-variant": "#004c69",
+            "inverse-primary": "#00668a",
+            "secondary": "#4de082",
+            "secondary-container": "#00b55d",
+            "secondary-fixed": "#6dfe9c",
+            "secondary-fixed-dim": "#4de082",
+            "on-secondary": "#003919",
+            "on-secondary-container": "#003e1c",
+            "on-secondary-fixed": "#00210c",
+            "on-secondary-fixed-variant": "#005227",
+            "tertiary": "#ffbcba",
+            "tertiary-container": "#ff9391",
+            "tertiary-fixed": "#ffdad8",
+            "tertiary-fixed-dim": "#ffb3b0",
+            "on-tertiary": "#670211",
+            "on-tertiary-container": "#841a22",
+            "on-tertiary-fixed": "#410006",
+            "on-tertiary-fixed-variant": "#881d24",
+            "error": "#ffb4ab",
+            "error-container": "#93000a",
+            "on-error": "#690005",
+            "on-error-container": "#ffdad6",
+            "outline": "#87929a",
+            "outline-variant": "#3e484f",
+            "inverse-surface": "#dae2fd",
+            "inverse-on-surface": "#283044"
+          },
+          borderRadius: {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          fontFamily: {
+            "headline": ["Lexend"],
+            "body": ["Lexend"],
+            "label": ["Lexend"]
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Lexend', sans-serif; min-height: 100dvh; }
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    .tonal-transition { background: linear-gradient(180deg, rgba(11,19,38,0.9) 0%, rgba(19,27,46,0.6) 100%); }
+    .answer-btn:disabled { cursor: default; }
+    .answer-btn:disabled:hover .answer-key { transform: none !important; }
+  </style>
+</head>
+<body class="bg-background text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+
+  <!-- Top App Bar -->
+  <header class="fixed top-0 w-full z-50 bg-slate-950/60 backdrop-blur-xl shadow-2xl shadow-slate-950/50 tonal-transition">
+    <div class="flex justify-between items-center px-5 py-4 max-w-2xl mx-auto">
+      <span class="text-base font-bold text-slate-100 tracking-tight">CP2 Practice Questions</span>
+      <div class="flex items-center gap-4">
+        <span id="progress-text" class="text-sky-300 font-semibold tracking-wider text-sm">Question 1 of 99</span>
+        <span class="text-slate-400 text-sm hidden sm:inline">Chapter 1</span>
+        <button id="start-over-btn" class="text-xs text-outline hover:text-on-surface-variant transition-colors duration-200 px-2 py-1 rounded opacity-60 hover:opacity-100" title="Start over from Question 1">
+          Start Over
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Quiz Screen -->
+  <div id="quiz-container">
+    <main class="pt-24 pb-16 px-5 max-w-2xl mx-auto space-y-6">
+
+      <!-- Question Card -->
+      <section class="bg-surface-container-low rounded-xl p-6 md:p-10 shadow-2xl shadow-black/30">
+        <!-- Card Header -->
+        <div class="flex justify-between items-start mb-6">
+          <span id="chapter-badge" class="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold tracking-widest uppercase">Chapter 1</span>
+          <button id="read-aloud-btn" class="flex items-center gap-2 px-4 py-2 bg-surface-container-high rounded-full text-primary hover:bg-surface-container-highest transition-all duration-300 active:scale-95" title="Read aloud">
+            <span class="material-symbols-outlined text-xl leading-none">volume_up</span>
+            <span class="text-sm font-medium hidden sm:inline">Read Aloud</span>
+          </button>
+        </div>
+
+        <!-- Question Text -->
+        <h1 id="question-text" class="text-xl md:text-2xl font-semibold text-on-surface leading-relaxed mb-6"></h1>
+
+        <!-- Question Image (hidden when not present) -->
+        <div id="question-image-container" class="hidden mb-6">
+          <div class="rounded-xl overflow-hidden bg-surface-container-highest aspect-video flex items-center justify-center">
+            <img id="question-image" alt="Question diagram" class="w-full h-full object-contain opacity-90"/>
+          </div>
+        </div>
+      </section>
+
+      <!-- Answer Options -->
+      <section>
+        <h2 class="text-xs font-medium tracking-widest text-outline uppercase ml-1 mb-3">Select Answer</h2>
+        <div id="answer-options" class="space-y-3"></div>
+      </section>
+
+      <!-- Submit Button (hidden until an answer is selected) -->
+      <div id="submit-btn-container" class="hidden flex justify-center">
+        <button id="submit-btn" class="w-full h-14 bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold rounded-xl shadow-lg shadow-primary/20 active:scale-95 transition-transform duration-200 text-lg">
+          Submit Answer
+        </button>
+      </div>
+
+      <!-- Feedback (hidden until answered) -->
+      <section id="feedback-section" class="hidden rounded-xl p-6 space-y-3">
+        <div class="flex items-center gap-3">
+          <div id="feedback-icon-container" class="p-2 rounded-full flex items-center justify-center shrink-0">
+            <span id="feedback-icon" class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1, 'wght' 700;">check</span>
+          </div>
+          <h3 id="feedback-title" class="text-lg font-bold"></h3>
+        </div>
+      </section>
+
+      <!-- Next Button (hidden until answered) -->
+      <div id="next-btn-container" class="hidden flex justify-center pt-2">
+        <button id="next-btn" class="flex items-center gap-2 text-primary font-semibold group py-4 px-8 rounded-full bg-surface-container-high hover:bg-surface-container-highest active:opacity-80 transition-all duration-200">
+          Next Question
+          <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+        </button>
+      </div>
+
+      <!-- Progress Bar -->
+      <footer class="pt-4">
+        <div class="w-full bg-surface-container-highest h-3 rounded-full overflow-hidden">
+          <div id="progress-bar" class="h-full bg-secondary rounded-full relative transition-all duration-500" style="width: 1%">
+            <div class="absolute right-0 top-0 bottom-0 w-1 bg-white/40 animate-pulse"></div>
+          </div>
+        </div>
+        <p id="progress-label" class="mt-2 text-xs font-label text-outline uppercase tracking-widest text-center">Overall Progress: 1%</p>
+      </footer>
+
+    </main>
+  </div>
+
+  <!-- Completion Screen (hidden until all questions done) -->
+  <div id="completion-screen" class="hidden">
+    <main class="pt-24 pb-16 px-5 max-w-2xl mx-auto">
+      <div class="flex flex-col items-center justify-center min-h-[60vh] text-center space-y-6">
+        <div class="w-24 h-24 bg-secondary/20 rounded-full flex items-center justify-center">
+          <span class="material-symbols-outlined text-secondary text-5xl" style="font-variation-settings: 'FILL' 1;">verified</span>
+        </div>
+        <div class="space-y-3">
+          <h1 class="text-3xl font-bold text-on-surface">Chapter 1 Complete!</h1>
+          <p class="text-on-surface-variant leading-relaxed">You've worked through all 99 questions.<br/>Great studying, David.</p>
+        </div>
+        <button id="completion-start-over-btn" class="mt-4 flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold rounded-xl shadow-lg shadow-primary/20 active:scale-95 transition-transform duration-200">
+          <span class="material-symbols-outlined">replay</span>
+          Start Over
+        </button>
+      </div>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

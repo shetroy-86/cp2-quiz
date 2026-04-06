@@ -1,0 +1,1383 @@
+[
+  {
+    "id": "ch1_q1",
+    "number": 1,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "flow of protons and electrons",
+      "B": "flow of neutrons and ions",
+      "C": "flow of protons and ions",
+      "D": "flow of electrons and ions",
+      "E": "flow of resistance and resistivity"
+    },
+    "question": "NACE 2008 Student Manual! START OF CHAPTER 1 Corrosion is an electrochemical process involving",
+    "answer": "D"
+  },
+  {
+    "id": "ch1_q2",
+    "number": 2,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "cathode",
+      "B": "anode",
+      "C": "electronic path",
+      "D": "metallic path"
+    },
+    "question": "Metal loss or corrosion occurs at the",
+    "answer": "B"
+  },
+  {
+    "id": "ch1_q3",
+    "number": 3,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "anode, resistor, electrolyte, metallic path",
+      "B": "anode, cathode, electron, electronic path",
+      "C": "anode, cathode, electrolyte, metallic path"
+    },
+    "question": "What are the four parts of the corrosion cell",
+    "answer": "C"
+  },
+  {
+    "type": "true_false",
+    "options": {
+      "T": "True",
+      "F": "False"
+    },
+    "question": "Ions exist only in the electrolyte?",
+    "answer": "T",
+    "chapter": 1,
+    "number": 4,
+    "id": "ch1_q4"
+  },
+  {
+    "id": "ch1_q5",
+    "number": 5,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "anode to cathode via electrolyte",
+      "B": "cathode to anode via electronic path",
+      "C": "anode to cathode via electronic path"
+    },
+    "question": "Electrons flow in a corrosion cell by which of the following paths?",
+    "answer": "C"
+  },
+  {
+    "id": "ch1_q6",
+    "number": 6,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "cathode, hydrogen",
+      "B": "cathode, OH-",
+      "C": "anode, hydrogen",
+      "D": "anode, OH-"
+    },
+    "question": "At the cathodic surface in a corrosion cell, the electrons from the ____ meet ____ ions from the solution.",
+    "answer": "C"
+  },
+  {
+    "id": "ch1_q7",
+    "number": 7,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "anodic, hydrogen, cathodes",
+      "B": "cathode, OH-, anodic",
+      "C": "anodic, OH-, cathodes",
+      "D": "cathode, anodic, electrolyte",
+      "E": "cathode, hydrogen, electrolyte"
+    },
+    "question": "Oxidation of the metal occurs at the ____ surfaces and reduction of ____ ions occurs at the ____.",
+    "answer": "A"
+  },
+  {
+    "type": "true_false",
+    "options": {
+      "T": "True",
+      "F": "False"
+    },
+    "question": "Is oxidation necessarily associated with oxygen?",
+    "answer": "F",
+    "chapter": 1,
+    "number": 8,
+    "id": "ch1_q8"
+  },
+  {
+    "id": "ch1_q9",
+    "number": 9,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "anode to metallic path to cathode",
+      "B": "anode to electronic path to cathode",
+      "C": "cathode to metallic to anode",
+      "D": "cathode to electrolyte to anode",
+      "E": "anode to electrolyte to cathode"
+    },
+    "question": "Current flow in a corrosion cell flows which path: Voltage is the measure of the electrochemical difference between two electrodes in an electrolyte",
+    "answer": "E"
+  },
+  {
+    "id": "ch1_q10",
+    "number": 10,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "current",
+      "B": "resistance",
+      "C": "error",
+      "D": "ohms",
+      "E": "ohms-cm"
+    },
+    "question": "_____ is the measure of the electrochemical difference between two electrodes in an electrolyte F) voltage",
+    "answer": "F"
+  },
+  {
+    "id": "ch1_q11",
+    "number": 11,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "current potential",
+      "B": "electrode potential",
+      "C": "resistance potential",
+      "D": "ohms potential",
+      "E": "Faraday potential"
+    },
+    "question": "The ________ represents the reversible work to move a unit charge from the electrode surface through the solution to the reference electrode",
+    "answer": "B"
+  },
+  {
+    "id": "ch1_q12",
+    "number": 12,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "ores",
+      "B": "anodic metals",
+      "C": "cathodic metals",
+      "D": "carbohydrates"
+    },
+    "question": "Metals occur in nature in the form of various chemical compounds referred to as ___",
+    "answer": "A"
+  },
+  {
+    "id": "ch1_q13",
+    "number": 13,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "current, active state",
+      "B": "voltage, active state",
+      "C": "active resistance, voltage",
+      "D": "resistance, active state",
+      "E": "current, active resistance"
+    },
+    "question": "The amount of energy required by a metal during the refining process determines the ___ or _______ of the metal.",
+    "answer": "B"
+  },
+  {
+    "id": "ch1_q14",
+    "number": 14,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "higher, inactive",
+      "B": "lower, active",
+      "C": "higher, active",
+      "D": "lower, inactive"
+    },
+    "question": "During the refining stage of metal the ____ the energy, the more ____ the metal and the more tendency it has to corrode.",
+    "answer": "C"
+  },
+  {
+    "id": "ch1_q15",
+    "number": 15,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "hemophite",
+      "B": "hematite",
+      "C": "magnesium",
+      "D": "calcium",
+      "E": "aluminum"
+    },
+    "question": "What is the most common iron ore?",
+    "answer": "B"
+  },
+  {
+    "type": "true_false",
+    "options": {
+      "T": "True",
+      "F": "False"
+    },
+    "question": "Iron is considered thermodynamically unstable?",
+    "answer": "T",
+    "chapter": 1,
+    "number": 16,
+    "id": "ch1_q16"
+  },
+  {
+    "type": "true_false",
+    "options": {
+      "T": "True",
+      "F": "False"
+    },
+    "question": "Gold is more noble than zinc?",
+    "answer": "T",
+    "chapter": 1,
+    "number": 17,
+    "id": "ch1_q17"
+  },
+  {
+    "id": "ch1_q18",
+    "number": 18,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "magnesium",
+      "B": "copper",
+      "C": "iron",
+      "D": "nickel",
+      "E": "platinum"
+    },
+    "question": "Which of the following metals is most active?",
+    "answer": "A"
+  },
+  {
+    "id": "ch1_q19",
+    "number": 19,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "unequal, cathode, anode",
+      "B": "unequal, anode, cathode",
+      "C": "equal, cathode, anode",
+      "D": "equal, anode, cathode"
+    },
+    "question": "Electromotive force (emf), is ____ in sign and magnitude to the electrode potential of the ___ less the electrode potential of the ____.",
+    "answer": "D"
+  },
+  {
+    "id": "ch1_q20",
+    "number": 20,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "current",
+      "B": "voltage",
+      "C": "resistance",
+      "D": "ohms",
+      "E": "siemens-cm"
+    },
+    "question": "The driving force for electrochemical corrosion is ____",
+    "answer": "B"
+  },
+  {
+    "id": "ch1_q21",
+    "number": 21,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "current",
+      "B": "voltage",
+      "C": "resistance",
+      "D": "ohms",
+      "E": "siemens-cm"
+    },
+    "question": "In relation to a corrosion cell, ____ is the net transfer of electric charge per unit time",
+    "answer": "A"
+  },
+  {
+    "id": "ch1_q22",
+    "number": 22,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "current, voltage",
+      "B": "resistance, current",
+      "C": "resistance, voltage",
+      "D": "voltage, current",
+      "E": "current, resistance"
+    },
+    "question": "If a metallic path connects two electrodes inside an electrolyte, the ____ difference will cause a ____ to flow between them",
+    "answer": "D"
+  },
+  {
+    "id": "ch1_q23",
+    "number": 23,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "emf series",
+      "B": "pgp series",
+      "C": "nuclear series",
+      "D": "electron series",
+      "E": "galvanic series"
+    },
+    "question": "The more useful method of organizing metals in order of their tendency to corrode is _____",
+    "answer": "E"
+  },
+  {
+    "id": "ch1_q24",
+    "number": 24,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "Ernest Equation",
+      "B": "Faraday Equation",
+      "C": "Ohm's Law Equation",
+      "D": "Nernst Equation",
+      "E": "Uniform Equation"
+    },
+    "question": "The ____ expresses the exact electromotive force of a cell in terms of the activities of products and reactants of the cell",
+    "answer": "D"
+  },
+  {
+    "id": "ch1_q25",
+    "number": 25,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "-0.892V",
+      "B": "-0.287V",
+      "C": "-0.827V",
+      "D": "-0.297V",
+      "E": "-0.889V"
+    },
+    "question": "Given the Nernst Equation, using the Valence of Common Metals Table, and using the partial Standard emf Series of Metals solve: What is the potential of zinc in a 0.01 molar zinc chloride solution at 25C?",
+    "answer": "C",
+    "image": "ch1_q25.png"
+  },
+  {
+    "id": "ch1_q26",
+    "number": 26,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "25, hydrogen",
+      "B": "35, hydrogen",
+      "C": "25, CSE",
+      "D": "35, CSE",
+      "E": "25, SSC"
+    },
+    "question": "E= -0.763 + (0.059/2) log (0.71 0.01/1) = -0.827V Standard conditions for pure metals in the emf series are based on one unit activity of metal ions in the electrolyte at ___ C with no impurities in the metal or electrolyte and with reference to a standard ____ electrode. F) 35, SSC",
+    "answer": "A"
+  },
+  {
+    "id": "ch1_q27",
+    "number": 27,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "lower, less active",
+      "B": "higher, less active",
+      "C": "lower, more active",
+      "D": "higher, less active"
+    },
+    "question": "The ____ the concentration of metal ions in the electrolyte, the ____ the metal.",
+    "answer": "B"
+  },
+  {
+    "id": "ch1_q28",
+    "number": 28,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "lower, anode",
+      "B": "higher, cathode",
+      "C": "lower, cathode",
+      "D": "higher, anode"
+    },
+    "question": "In reference to the temperature in a corrosion cell, in most cases, electrode at the _____ temperature becomes the ____",
+    "answer": "D"
+  },
+  {
+    "id": "ch1_q29",
+    "number": 29,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "higher, active",
+      "B": "lower, active",
+      "C": "higher, inactive",
+      "D": "lower, inactive"
+    },
+    "question": "During metal fabrication of structures, highly stressed areas of a metal will tend to be at ____ energy levels, thus more ____ than less stressed areas",
+    "answer": "A"
+  },
+  {
+    "type": "true_false",
+    "options": {
+      "T": "True",
+      "F": "False"
+    },
+    "question": "Corrosion cells may form because of differences in the electrolyte",
+    "answer": "T",
+    "chapter": 1,
+    "number": 30,
+    "id": "ch1_q30"
+  },
+  {
+    "id": "ch1_q31",
+    "number": 31,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "concentration",
+      "B": "steady state",
+      "C": "carbon",
+      "D": "dynamic",
+      "E": "telluric"
+    },
+    "question": "____ cells are responsible for much of the corrosion that take place in soils, particularly in bare or poorly coated pipe",
+    "answer": "A"
+  },
+  {
+    "id": "ch1_q32",
+    "number": 32,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "inductive, anode / inductive, cathode",
+      "B": "inductive, cathode / inductive, anode",
+      "C": "conductive, anode / conductive, cathode",
+      "D": "conductive, cathode /conductive, anode"
+    },
+    "question": "In many cases in naturally occurring soils, a portion of pipe lying in the more _____ soil is the ____ and in the less ____soil is the ___.",
+    "answer": "C"
+  },
+  {
+    "id": "ch1_q33",
+    "number": 33,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "oxygen, nonmettalic ion",
+      "B": "oxygen, calcium",
+      "C": "lack of oxygen, metal ion",
+      "D": "oxygen, metal ion"
+    },
+    "question": "The two most common types of concentration cells involved in promoting corrosion are ____ and ____.",
+    "answer": "D"
+  },
+  {
+    "id": "ch1_q34",
+    "number": 34,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "CO2",
+      "B": "oxygen",
+      "C": "carbon",
+      "D": "OH-",
+      "E": "Hydrogen"
+    },
+    "question": "What is the most common of the cathodic depolarizers, that can maintain and promote a cathodic reaction?",
+    "answer": "B"
+  },
+  {
+    "id": "ch1_q35",
+    "number": 35,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "sides",
+      "B": "top",
+      "C": "bottom"
+    },
+    "question": "Most corrosion on pipelines is on the ____ portion of the pipe",
+    "answer": "C"
+  },
+  {
+    "id": "ch1_q36",
+    "number": 36,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "anode is the metal outside the pavement, the cathode is the metal under the pavement",
+      "B": "anode is the metal under the pavement, the cathode is the metal outside the pavement",
+      "C": "cathode is the metal under the pavement, the anode is the metal outside the pavement"
+    },
+    "question": "If a pipe is running through a section of pavement and through a section of non pavement:",
+    "answer": "B"
+  },
+  {
+    "id": "ch1_q37",
+    "number": 37,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "lower, anode",
+      "B": "lower, cathode",
+      "C": "higher, anode",
+      "D": "higher cathode"
+    },
+    "question": "In a metal ion concentration cell, the surface in contact with ____ concentration of metal ions acts as the ____",
+    "answer": "A"
+  },
+  {
+    "id": "ch1_q38",
+    "number": 38,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "40",
+      "B": "50",
+      "C": "20",
+      "D": "70",
+      "E": "60"
+    },
+    "question": "Theoretically, the potential of a structure changes by about ____mV for each pH unit",
+    "answer": "E"
+  },
+  {
+    "id": "ch1_q39",
+    "number": 39,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "-440mV",
+      "B": "-660mV",
+      "C": "-300mV",
+      "D": "-560mV"
+    },
+    "question": "The corrosion potential of a metal might be -500mV in an environment with a pH of 7, but the corrosion potential might be ____ at a pH of 8?",
+    "answer": "D"
+  },
+  {
+    "type": "true_false",
+    "options": {
+      "T": "True",
+      "F": "False"
+    },
+    "question": "an acidic pH can be harmful to concrete, such as reinforced concrete structures?",
+    "answer": "T",
+    "chapter": 1,
+    "number": 40,
+    "id": "ch1_q40"
+  },
+  {
+    "id": "ch1_q41",
+    "number": 41,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "4",
+      "B": "6",
+      "C": "5",
+      "D": "2",
+      "E": "8"
+    },
+    "question": "A pH of less than ____ is considered to be harmful to concrete?",
+    "answer": "C"
+  },
+  {
+    "id": "ch1_q42",
+    "number": 42,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "inproporinate, current",
+      "B": "inproporinate, voltage",
+      "C": "proportional, voltage",
+      "D": "proportional, current"
+    },
+    "question": "The rate of corrosion is directly ____ to ____ flow?",
+    "answer": "D"
+  },
+  {
+    "id": "ch1_q43",
+    "number": 43,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "50lbs",
+      "B": "35lbs",
+      "C": "25 lbs",
+      "D": "45lbs",
+      "E": "30lbs"
+    },
+    "question": "If a 1 Amp CP system must last 40 years and the electrochemical equivalent for silicon chromium cast iron anodes is 0.75 lb/A-yr, how many pounds of anodes are needed?",
+    "answer": "E"
+  },
+  {
+    "id": "ch1_q44",
+    "number": 44,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "higher",
+      "B": "lower"
+    },
+    "question": "All things being equal, the greater the magnitude of the difference between two voltages of metals, the ____ the current flow and rate of corrosion",
+    "answer": "A"
+  },
+  {
+    "type": "true_false",
+    "options": {
+      "T": "True",
+      "F": "False"
+    },
+    "question": "Magnesium will corrode at a slower rate when connected to steel rather than zinc?",
+    "answer": "F",
+    "chapter": 1,
+    "number": 45,
+    "id": "ch1_q45"
+  },
+  {
+    "id": "ch1_q46",
+    "number": 46,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "CSE",
+      "B": "Ag/AgCI",
+      "C": "Calomel",
+      "D": "Zinc",
+      "E": "SHE"
+    },
+    "question": "Which reference electrode is considered a primary reference electrode because it is used to determine the potential of other secondary reference electrodes that are better suited for field use?",
+    "answer": "E"
+  },
+  {
+    "id": "ch1_q47",
+    "number": 47,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "CSE",
+      "B": "Ag/AgCI",
+      "C": "Calomel",
+      "D": "Zinc",
+      "E": "SHE"
+    },
+    "question": "Most common used reference electrode for measuring potentials of underground structures?",
+    "answer": "A"
+  },
+  {
+    "type": "true_false",
+    "options": {
+      "T": "True",
+      "F": "False"
+    },
+    "question": "The potential of a reference electrode in the sun can decrease from 10 to 50mV versus an electrode kept in the dark?",
+    "answer": "T",
+    "chapter": 1,
+    "number": 48,
+    "id": "ch1_q48"
+  },
+  {
+    "id": "ch1_q49",
+    "number": 49,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "CSE",
+      "B": "Ag/AgCI",
+      "C": "Calomel",
+      "D": "Zinc",
+      "E": "SHE"
+    },
+    "question": "Which reference electrode is mostly commonly used in seawater?",
+    "answer": "B"
+  },
+  {
+    "id": "ch1_q50",
+    "number": 50,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "CSE",
+      "B": "Ag/AgCI",
+      "C": "Calomel",
+      "D": "Zinc",
+      "E": "SHE"
+    },
+    "question": "Which reference electrode is mostly commonly used in concrete structures?",
+    "answer": "B"
+  },
+  {
+    "id": "ch1_q51",
+    "number": 51,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "CSE",
+      "B": "Ag/AgCI",
+      "C": "Calomel",
+      "D": "Zinc"
+    },
+    "question": "Which of the following is primarily a laboratory electrode?",
+    "answer": "C"
+  },
+  {
+    "id": "ch1_q52",
+    "number": 52,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "negative , positive",
+      "B": "positive, negative"
+    },
+    "question": "When doing a structure to electrolyte potential , the structure is connected via the _____ terminal and the reference is connected via the _____ terminal",
+    "answer": "B"
+  },
+  {
+    "id": "ch1_q53",
+    "number": 53,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "+0.306 sce",
+      "B": "-0.750 sce",
+      "C": "-0.735 sce"
+    },
+    "question": "A potential of -0.810Vcse converted to Calomel (SCE)",
+    "answer": "C"
+  },
+  {
+    "id": "ch1_q54",
+    "number": 54,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "+0.306 ssc",
+      "B": "-0.735 ssc",
+      "C": "-0.750 ssc"
+    },
+    "question": "A potential of -0.810Vcse converted to Ag/AgCI (SSC)",
+    "answer": "C"
+  },
+  {
+    "id": "ch1_q55",
+    "number": 55,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "+0.306 zre",
+      "B": "-0.735 zre",
+      "C": "-0.750 zre"
+    },
+    "question": "A potential of -0.810Vcse converted to Zinc (ZRE)",
+    "answer": "A"
+  },
+  {
+    "type": "true_false",
+    "options": {
+      "T": "True",
+      "F": "False"
+    },
+    "question": "The potential of a STATIONARY reference electrode should be checked from time to time with a portable reference electrode that is known to be accurate under \"no current\" conditions.",
+    "answer": "T",
+    "chapter": 1,
+    "number": 56,
+    "id": "ch1_q56"
+  },
+  {
+    "id": "ch1_q57",
+    "number": 57,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "at the anode and the cathode",
+      "B": "at the anode",
+      "C": "at the cathode"
+    },
+    "question": "As current is impressed on a metal over time, where does polarization occur?",
+    "answer": "A"
+  },
+  {
+    "id": "ch1_q58",
+    "number": 58,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "lowers, drops, decreases",
+      "B": "increases, increases, decreases",
+      "C": "lowers, increases, decreases",
+      "D": "lowers, drops, decreases"
+    },
+    "question": "Polarization _____ the potential difference between the anode and the cathode and by Ohm's Law, the current ___ and the corrosion rate ____ until an equilibrium is reached",
+    "answer": "D"
+  },
+  {
+    "id": "ch1_q59",
+    "number": 59,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "only I",
+      "B": "only II",
+      "C": "I and II",
+      "D": "I, II , III"
+    },
+    "question": "Depolarizers include: I dissolved oxygen II microbiological activity III water flow",
+    "answer": "D"
+  },
+  {
+    "id": "ch1_q60",
+    "number": 60,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "telluric current",
+      "B": "dynamic current",
+      "C": "corrosion current",
+      "D": "mixed potential current",
+      "E": "closed current"
+    },
+    "question": "The name for the current that exists during the steady state of polarization is called the _____ of the system",
+    "answer": "C"
+  },
+  {
+    "id": "ch1_q61",
+    "number": 61,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "mixed potential",
+      "B": "corrosion potential",
+      "C": "corrosion current",
+      "D": "open circuit potential"
+    },
+    "question": "The potential normally measured between the polarized cathode potential and the polarized anode potential",
+    "answer": "A"
+  },
+  {
+    "id": "ch1_q62",
+    "number": 62,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "mixed potentials",
+      "B": "corrosion potentials",
+      "C": "corrosion current potentials",
+      "D": "open circuit potentials"
+    },
+    "question": "_____ are the potentials of the cathode and anode when the corrosion current is zero",
+    "answer": "D"
+  },
+  {
+    "id": "ch1_q63",
+    "number": 63,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "activation polarization",
+      "B": "concentration polarization",
+      "C": "mixed polarization",
+      "D": "reactant polarization"
+    },
+    "question": "______ is the result of the reaction steps at the structure/electrolyte interface including the actual transfer of charge",
+    "answer": "A"
+  },
+  {
+    "id": "ch1_q64",
+    "number": 64,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "activation polarization",
+      "B": "concentration polarization",
+      "C": "mixed polarization",
+      "D": "reactant polarization"
+    },
+    "question": "In concentrated acids, _______ polarization predominates",
+    "answer": "A"
+  },
+  {
+    "id": "ch1_q65",
+    "number": 65,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "activation polarization",
+      "B": "concentration polarization",
+      "C": "mixed polarization",
+      "D": "reactant polarization"
+    },
+    "question": "_______ is the result of reaction steps involving the diffusion of reactants up to the reaction products away from the reaction surface",
+    "answer": "B"
+  },
+  {
+    "id": "ch1_q66",
+    "number": 66,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "decrease, increase",
+      "B": "increase, decrease"
+    },
+    "question": "Anything that causes a depletion of available reactants or a buildup of reaction products results in a ____ in the reaction rate and an _____ in concentration polarization.",
+    "answer": "A"
+  },
+  {
+    "id": "ch1_q67",
+    "number": 67,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "activation polarization",
+      "B": "concentration polarization"
+    },
+    "question": "If the slowest step in the overall process involves waiting for arrival of reactants or the removal of reaction products, the reaction is under __________ control.",
+    "answer": "B"
+  },
+  {
+    "id": "ch1_q68",
+    "number": 68,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "activation polarization",
+      "B": "concentration polarization"
+    },
+    "question": "If the slowest step in the overall reaction process is is on the metal surface or in the charge transfer reaction the process is under _____",
+    "answer": "A"
+  },
+  {
+    "id": "ch1_q69",
+    "number": 69,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "activation polarization",
+      "B": "concentration polarization"
+    },
+    "question": "__________ usually predominates in electrolytes where the concentration of the reactants is low, as with dilute solutions, or there is a buildup of reaction products from activation polarization or in stagnant environments.",
+    "answer": "B"
+  },
+  {
+    "id": "ch1_q70",
+    "number": 70,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "increases, decreases",
+      "B": "decreases, decreases",
+      "C": "increases, increases",
+      "D": "decreases, increases"
+    },
+    "question": "As polarization ____ , current _____",
+    "answer": "C"
+  },
+  {
+    "id": "ch1_q71",
+    "number": 71,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "increase",
+      "B": "decrease"
+    },
+    "question": "An increase in ions will result in a ____ in resistivity",
+    "answer": "B"
+  },
+  {
+    "id": "ch1_q72",
+    "number": 72,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "larger, larger",
+      "B": "less, larger",
+      "C": "greater, smaller",
+      "D": "smaller, smaller",
+      "E": "greater, larger"
+    },
+    "question": "The effect of current concentrated on a small area will be ____ than the effect of the same amount of current on a ____ area. A coated structure will polarize more rapidly than a bare structure",
+    "answer": "E"
+  },
+  {
+    "type": "true_false",
+    "options": {
+      "T": "True",
+      "F": "False"
+    },
+    "question": "A small anode and a large cathode is desirable",
+    "answer": "F",
+    "chapter": 1,
+    "number": 73,
+    "id": "ch1_q73"
+  },
+  {
+    "id": "ch1_q74",
+    "number": 74,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "increase, increase, depolarizes, increases",
+      "B": "increase, increase, depolarizes, decrease",
+      "C": "decrease, decrease, polarize, increase",
+      "D": "decrease, increase, polarize, decrease"
+    },
+    "question": "A(n) ____ in temperature has a tendency to ____ chemical reactions, which _____ the electrodes and _____ current",
+    "answer": "A"
+  },
+  {
+    "id": "ch1_q75",
+    "number": 75,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "increase, decrease",
+      "B": "increase, increase",
+      "C": "decrease, increase",
+      "D": "decrease, decrease"
+    },
+    "question": "A(n) ____ in temperature results in a(n) ____ in polarization",
+    "answer": "C"
+  },
+  {
+    "id": "ch1_q76",
+    "number": 76,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "decreased, decrease, decrease",
+      "B": "decreased, increase, decrease",
+      "C": "increased, increase, decrease",
+      "D": "increased, decrease, decrease",
+      "E": "increased, increase, increase"
+    },
+    "question": "____ movement results in a ____ in polarization and a(n) _____ in current",
+    "answer": "D"
+  },
+  {
+    "id": "ch1_q77",
+    "number": 77,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "increase, decrease, decrease",
+      "B": "decrease, decrease, decrease",
+      "C": "decrease, increase, decrease",
+      "D": "increase, increase, decrease",
+      "E": "decrease, decrease, increase"
+    },
+    "question": "A(n) _____ in the metal ion concentration of the anode metal results in a(n) ____ in polarization of the anode and a(n) ____ in current",
+    "answer": "E"
+  },
+  {
+    "id": "ch1_q78",
+    "number": 78,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "CO2, OH-",
+      "B": "oxygen, OH-",
+      "C": "carbon, OH-",
+      "D": "oxygen, hydrogen"
+    },
+    "question": "Polarization of the cathode can be affected by the concentration of cathodic reactants, such as _____ or _____ ions",
+    "answer": "D"
+  },
+  {
+    "id": "ch1_q79",
+    "number": 79,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "increase, decrease, decrease",
+      "B": "decrease, decrease, decrease",
+      "C": "increase, decrease, increase",
+      "D": "increase, increase, decrease",
+      "E": "decrease, decrease, increase"
+    },
+    "question": "In regards to cathodic reactants, a(n) _____ in the concentration of either of the reactants of oxygen or hydrogen will _____ polarization of the cathode and _____ current and vice versa",
+    "answer": "C"
+  },
+  {
+    "id": "ch1_q80",
+    "number": 80,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "gain of chemical reactivity",
+      "B": "polarization of chemical reactivity",
+      "C": "loss of chemical reactivity",
+      "D": "depolarization of molecular reactivity",
+      "E": "polarization of molecular reactivity"
+    },
+    "question": "Passivity can be defined as the",
+    "answer": "C"
+  },
+  {
+    "id": "ch1_q81",
+    "number": 81,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "transpassive",
+      "B": "passive",
+      "C": "nonpassive",
+      "D": "active"
+    },
+    "question": "The ____ region is when a slight increase in corrosion potential causes the corrosion current to increase",
+    "answer": "D"
+  },
+  {
+    "id": "ch1_q82",
+    "number": 82,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "transpassive",
+      "B": "passive",
+      "C": "nonpassive",
+      "D": "active"
+    },
+    "question": "The ____ region is when the corrosion potential increases to a certain point, however, the corrosion current suddenly decreases and remain essentially constant",
+    "answer": "B"
+  },
+  {
+    "id": "ch1_q83",
+    "number": 83,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "transpassive",
+      "B": "passive",
+      "C": "nonpassive",
+      "D": "active"
+    },
+    "question": "The ____ region occurs if the potential is increased sufficiently thus current again increases",
+    "answer": "A"
+  },
+  {
+    "id": "ch1_q84",
+    "number": 84,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "increases, increases",
+      "B": "decreases, decreases",
+      "C": "increases, decreases",
+      "D": "decreases, increases"
+    },
+    "question": "For the active (or nonpassivating) metal, as corrosion potential _____, corrosion current ____, more or less logarithmically (or linearly on a semi- log graph).",
+    "answer": "A"
+  },
+  {
+    "id": "ch1_q85",
+    "number": 85,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "ore",
+      "B": "oxide",
+      "C": "reductant",
+      "D": "selimum"
+    },
+    "question": "This type of film which forms naturally on most metals when they are exposed to the air, can provide substantial protection against further attack by many environments",
+    "answer": "B"
+  },
+  {
+    "id": "ch1_q86",
+    "number": 86,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "Galvanic attack",
+      "B": "intergranular attack",
+      "C": "selective leaching",
+      "D": "velocity phenomena",
+      "E": "pitting"
+    },
+    "question": "Type of corrosion with an even loss of metal over the entire area or a large area of the structure F) crevice corrosion G) uniform attack g This type of corrosion occurs where two tightly spaced surfaces - either two metals or a metal and nonmetal - are exposed to a corroding environment. Holes, gasket surfaces, lap joints, surface deposits, and crevices are likely places for this type of corrosion. F) crevice corrosion G) uniform attack",
+    "answer": "F"
+  },
+  {
+    "id": "ch1_q87",
+    "number": 87,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "Galvanic attack",
+      "B": "intergranular attack",
+      "C": "selective leaching",
+      "D": "velocity phenomena",
+      "E": "pitting"
+    },
+    "question": "This corrosion occurs when two dissimilar metals are connected. The potential of the two metals creates a voltage difference, the driving force for corrosion. F) crevice corrosion G) uniform attack",
+    "answer": "A"
+  },
+  {
+    "id": "ch1_q88",
+    "number": 88,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "Galvanic attack",
+      "B": "intergranular attack",
+      "C": "selective leaching",
+      "D": "velocity phenomena",
+      "E": "pitting"
+    },
+    "question": "Localized corrosion that occurs over a small area of the metal surface and leaves holes in the surface. F) crevice corrosion G) uniform attack",
+    "answer": "E"
+  },
+  {
+    "id": "ch1_q89",
+    "number": 89,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "Galvanic attack",
+      "B": "intergranular attack",
+      "C": "selective leaching",
+      "D": "velocity phenomena",
+      "E": "pitting"
+    },
+    "question": "This is a local corrosion attack at the grain boundaries of an alloy. It is caused by a difference in element composition near the boundaries, compared to the rest of the alloy. F) crevice corrosion G) uniform attack",
+    "answer": "B"
+  },
+  {
+    "id": "ch1_q90",
+    "number": 90,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "Galvanic attack",
+      "B": "intergranular attack",
+      "C": "selective leaching",
+      "D": "velocity phenomena",
+      "E": "pitting"
+    },
+    "question": "This type of corrosion involves the certain removal of one of the elements from an alloy. F) crevice corrosion G) uniform attack",
+    "answer": "C"
+  },
+  {
+    "id": "ch1_q91",
+    "number": 91,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "Galvanic attack",
+      "B": "intergranular attack",
+      "C": "selective leaching",
+      "D": "velocity phenomena",
+      "E": "pitting"
+    },
+    "question": "This corrosion is associated with rapid movement of a corrosive fluid over a metal, removing corrosion products. F) crevice corrosion G) uniform attack",
+    "answer": "D"
+  },
+  {
+    "id": "ch1_q92",
+    "number": 92,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "Galvanic attack",
+      "B": "intergranular attack",
+      "C": "selective leaching",
+      "D": "velocity phenomena",
+      "E": "environmental cracking"
+    },
+    "question": "results from the reaction of the metal with a corrosive environment and the presence of a stress F) crevice corrosion G) uniform attack",
+    "answer": "D"
+  },
+  {
+    "id": "ch1_q93",
+    "number": 93,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "1,000",
+      "B": "1,044",
+      "C": "1,500",
+      "D": "1,200"
+    },
+    "question": "In general, hydrogen is generated in neutral environments at - ____ mV CSE",
+    "answer": "B"
+  },
+  {
+    "id": "ch1_q94",
+    "number": 94,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "1,000",
+      "B": "1,044",
+      "C": "1,500",
+      "D": "1,200"
+    },
+    "question": "For aluminum, the polarized potential must be kept below - _____ mV CSE to avoid alkali corrosion",
+    "answer": "D"
+  },
+  {
+    "id": "ch1_q95",
+    "number": 95,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "800",
+      "B": "700",
+      "C": "1,500",
+      "D": "1,200"
+    },
+    "question": "For titanium, the maximum potential is ____ mV ssc to prevent hydriding",
+    "answer": "B"
+  },
+  {
+    "id": "ch1_q96",
+    "number": 96,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "1,000",
+      "B": "1,044",
+      "C": "1,500",
+      "D": "1,200"
+    },
+    "question": "For prestressed concrete, polarized potentials more negative than -____ mV should be avoided",
+    "answer": "A"
+  },
+  {
+    "id": "ch1_q97",
+    "number": 97,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "stress corrosion cracking",
+      "B": "intergranular attack",
+      "C": "selective leaching",
+      "D": "velocity phenomena",
+      "E": "pitting"
+    },
+    "question": "The cracking of a metal under an applied tensile stress in the presence of a corrosive environment",
+    "answer": "A"
+  },
+  {
+    "id": "ch1_q98",
+    "number": 98,
+    "chapter": 1,
+    "type": "mcq",
+    "options": {
+      "A": "-525 to -725, 5 and 7, more",
+      "B": "-625 to -825, 7 and 9.5, less",
+      "C": "-525 to -725, 8 and 10.5, more",
+      "D": "-625 to 700, 8 and 10.5, less"
+    },
+    "question": "Stress Corrosion Cracking occurs in a narrow potential range of ______ at a pH between ______ , and is more likely at ____ temperatures",
+    "answer": "C"
+  },
+  {
+    "type": "true_false",
+    "options": {
+      "T": "True",
+      "F": "False"
+    },
+    "question": "MIC exist under non anaerobic conditions (presence of great oxygen)",
+    "answer": "F",
+    "chapter": 1,
+    "number": 99,
+    "id": "ch1_q99"
+  }
+]
