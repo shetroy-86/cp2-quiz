@@ -302,8 +302,7 @@ function populateVoices() {
   const select = document.getElementById('voice-select');
   const saved  = localStorage.getItem(STORAGE_VOICE_KEY);
 
-  let voices = window.speechSynthesis.getVoices().filter(v => v.lang.startsWith('en'));
-  if (voices.length === 0) voices = window.speechSynthesis.getVoices(); // fallback: show all
+  const voices = window.speechSynthesis.getVoices();
 
   select.innerHTML = '';
   voices.forEach(v => {
@@ -378,16 +377,14 @@ document.addEventListener('DOMContentLoaded', () => {
     localStorage.setItem(STORAGE_VOICE_KEY, e.target.value);
   });
 
-  // Voices load asynchronously — voiceschanged fires on Chrome/Firefox,
-  // but often never fires on iOS. Poll as a fallback.
+  // Voices load asynchronously — voiceschanged fires on desktop Chrome/Firefox,
+  // but iOS won't provide voices until after a user gesture.
   window.speechSynthesis.addEventListener('voiceschanged', populateVoices);
   populateVoices();
-  const voiceRetry = setInterval(() => {
-    if (window.speechSynthesis.getVoices().length > 0) {
-      populateVoices();
-      clearInterval(voiceRetry);
-    }
-  }, 250);
+  document.addEventListener('touchstart', function initVoicesOnTouch() {
+    populateVoices();
+    document.removeEventListener('touchstart', initVoicesOnTouch);
+  }, { once: true });
 
   loadQuestions();
 });
