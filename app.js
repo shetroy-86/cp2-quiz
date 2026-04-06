@@ -378,9 +378,16 @@ document.addEventListener('DOMContentLoaded', () => {
     localStorage.setItem(STORAGE_VOICE_KEY, e.target.value);
   });
 
-  // Voices load asynchronously in most browsers
+  // Voices load asynchronously — voiceschanged fires on Chrome/Firefox,
+  // but often never fires on iOS. Poll as a fallback.
   window.speechSynthesis.addEventListener('voiceschanged', populateVoices);
-  populateVoices(); // also try immediately (works in Firefox)
+  populateVoices();
+  const voiceRetry = setInterval(() => {
+    if (window.speechSynthesis.getVoices().length > 0) {
+      populateVoices();
+      clearInterval(voiceRetry);
+    }
+  }, 250);
 
   loadQuestions();
 });
