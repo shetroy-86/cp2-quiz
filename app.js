@@ -377,6 +377,9 @@ document.addEventListener('DOMContentLoaded', () => {
     localStorage.setItem(STORAGE_VOICE_KEY, e.target.value);
   });
 
+  // Refresh voice list when dropdown is opened — catches newly downloaded voices
+  document.getElementById('voice-select').addEventListener('focus', populateVoices);
+
   // Voices load asynchronously — voiceschanged fires on desktop Chrome/Firefox,
   // but iOS won't provide voices until after a user gesture.
   window.speechSynthesis.addEventListener('voiceschanged', populateVoices);
