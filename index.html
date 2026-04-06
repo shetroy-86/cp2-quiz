@@ -135,6 +135,14 @@
         <div id="answer-options" class="space-y-3"></div>
       </section>
 
+      <!-- Previous Button (hidden on Q1 and in retry mode) -->
+      <div id="prev-btn-container" class="hidden flex justify-start pt-2">
+        <button id="prev-btn" class="flex items-center gap-2 text-on-surface-variant font-semibold group py-3 px-6 rounded-full bg-surface-container-high hover:bg-surface-container-highest active:opacity-80 transition-all duration-200">
+          <span class="material-symbols-outlined transition-transform group-hover:-translate-x-1">arrow_back</span>
+          Previous
+        </button>
+      </div>
+
       <!-- Submit Button (hidden until an answer is selected) -->
       <div id="submit-btn-container" class="hidden flex justify-center">
         <button id="submit-btn" class="w-full h-14 bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold rounded-xl shadow-lg shadow-primary/20 active:scale-95 transition-transform duration-200 text-lg">
@@ -170,6 +178,26 @@
         <p id="progress-label" class="mt-2 text-xs font-label text-outline uppercase tracking-widest text-center">Overall Progress: 1%</p>
       </footer>
 
+    </main>
+  </div>
+
+  <!-- Score Summary Screen (shown after all 99 questions, before retry) -->
+  <div id="score-screen" class="hidden">
+    <main class="pt-24 pb-16 px-5 max-w-2xl mx-auto">
+      <div class="flex flex-col items-center justify-center min-h-[60vh] text-center space-y-6">
+        <div class="w-24 h-24 bg-primary/20 rounded-full flex items-center justify-center">
+          <span class="material-symbols-outlined text-primary text-5xl" style="font-variation-settings: 'FILL' 1;">scoreboard</span>
+        </div>
+        <div class="space-y-3">
+          <h1 class="text-3xl font-bold text-on-surface">Section Complete</h1>
+          <p id="score-text" class="text-2xl font-semibold text-primary"></p>
+          <p id="score-subtext" class="text-on-surface-variant leading-relaxed"></p>
+        </div>
+        <button id="score-continue-btn" class="mt-4 flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold rounded-xl shadow-lg shadow-primary/20 active:scale-95 transition-transform duration-200">
+          <span class="material-symbols-outlined">arrow_forward</span>
+          <span id="score-continue-label">Review Missed Questions</span>
+        </button>
+      </div>
     </main>
   </div>
 

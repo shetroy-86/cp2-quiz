@@ -4,10 +4,12 @@ const STORAGE_VOICE_KEY = 'cp2_voice';         // preferred voice name
 
 const state = {
   questions:     [],
-  currentIndex:  0,
+  currentIndex:  0,   // frontier: highest question reached
+  viewIndex:     0,   // what is currently displayed (may be < currentIndex when browsing back)
   selectedAnswer: null,
   submitted:     false,
   speaking:      false,
+  answerHistory: {},  // { questionIndex: { selected, correct } } — session only
   // retry
   retryQueue:    [],       // indices of questions answered wrong (master list)
   retryMode:     false,
@@ -38,6 +40,7 @@ async function loadQuestions() {
       state.retryIndex = 0; // restart the pass from the top
     } else if (savedIdx >= 0 && savedIdx < state.questions.length) {
       state.currentIndex = savedIdx;
+      state.viewIndex    = savedIdx;
     }
   }
 
@@ -47,9 +50,15 @@ async function loadQuestions() {
 // ── Helpers ───────────────────────────────────────────────────────────────────
 
 function currentQuestion() {
-  return state.retryMode
-    ? state.questions[state.retryQueue[state.retryIndex]]
-    : state.questions[state.currentIndex];
+  if (state.retryMode) {
+    return state.questions[state.retryQueue[state.retryIndex]];
+  }
+  return state.questions[state.viewIndex];
+}
+
+// True when the user is looking at a previously-answered question (read-only)
+function isHistoryMode() {
+  return !state.retryMode && state.viewIndex < state.currentIndex;
 }
 
 // ── Render ────────────────────────────────────────────────────────────────────
@@ -68,7 +77,7 @@ function renderQuestion() {
       `${remaining} question${remaining !== 1 ? 's' : ''} left to review`;
     document.getElementById('chapter-badge').textContent = 'Review Mode';
   } else {
-    const num = state.currentIndex + 1;
+    const num = state.viewIndex + 1;
     document.getElementById('progress-text').textContent = `Question ${num} of ${total}`;
     document.getElementById('progress-bar').style.width  = Math.round((num / total) * 100) + '%';
     document.getElementById('progress-label').textContent = `Overall Progress: ${Math.round((num / total) * 100)}%`;
@@ -113,12 +122,82 @@ function renderQuestion() {
   if (window.speechSynthesis.speaking) window.speechSynthesis.cancel();
   state.speaking = false;
   updateReadAloudBtn();
+
+  // Previous button — only in normal mode, not on the very first question
+  const prevContainer = document.getElementById('prev-btn-container');
+  if (!state.retryMode && state.viewIndex > 0) {
+    prevContainer.classList.remove('hidden');
+  } else {
+    prevContainer.classList.add('hidden');
+  }
+
+  // In history mode: apply locked read-only state
+  if (isHistoryMode()) {
+    const hist = state.answerHistory[state.viewIndex];
+    if (hist) {
+      applyHistoryState(hist, q);
+    } else {
+      // Restored from localStorage — no answer recorded; lock buttons, show next
+      document.querySelectorAll('.answer-btn').forEach(btn => { btn.disabled = true; });
+      document.getElementById('next-btn-container').classList.remove('hidden');
+    }
+  }
+}
+
+// Replays the post-submit visual state for a previously answered question (read-only)
+function applyHistoryState(hist, q) {
+  const { selected, correct } = hist;
+
+  document.querySelectorAll('.answer-btn').forEach(btn => {
+    btn.disabled = true;
+    const k       = btn.dataset.key;
+    const keySpan = btn.querySelector('.answer-key');
+
+    if (k === q.answer) {
+      btn.classList.add('border-secondary/50', 'bg-secondary/5');
+      btn.classList.remove('border-transparent');
+      keySpan.classList.add('bg-secondary', 'text-on-secondary');
+      keySpan.classList.remove('bg-surface-container-highest', 'text-primary');
+    }
+    if (k === selected && !correct) {
+      btn.classList.add('border-tertiary-container/50', 'bg-tertiary-container/5');
+      btn.classList.remove('border-transparent');
+      keySpan.classList.add('bg-tertiary-container', 'text-on-tertiary-container');
+      keySpan.classList.remove('bg-surface-container-highest', 'text-primary');
+    }
+  });
+
+  const feedbackSection       = document.getElementById('feedback-section');
+  const feedbackIconContainer = document.getElementById('feedback-icon-container');
+  const feedbackIcon          = document.getElementById('feedback-icon');
+  const feedbackTitle         = document.getElementById('feedback-title');
+
+  feedbackSection.classList.remove('hidden');
+
+  if (correct) {
+    feedbackSection.className       = 'bg-secondary/10 rounded-xl p-6 space-y-3';
+    feedbackIconContainer.className = 'bg-secondary-container p-2 rounded-full flex items-center justify-center shrink-0';
+    feedbackIcon.textContent        = 'check';
+    feedbackIcon.className          = 'material-symbols-outlined text-on-secondary text-xl';
+    feedbackTitle.textContent       = 'Correct!';
+    feedbackTitle.className         = 'text-lg font-bold text-secondary';
+  } else {
+    feedbackSection.className       = 'bg-tertiary-container/10 rounded-xl p-6 space-y-3';
+    feedbackIconContainer.className = 'bg-tertiary-container/30 p-2 rounded-full flex items-center justify-center shrink-0';
+    feedbackIcon.textContent        = 'close';
+    feedbackIcon.className          = 'material-symbols-outlined text-on-tertiary-container text-xl';
+    feedbackTitle.textContent       = `Incorrect — the answer is ${q.answer}`;
+    feedbackTitle.className         = 'text-lg font-bold text-tertiary-container';
+  }
+
+  document.getElementById('next-btn-container').classList.remove('hidden');
 }
 
 // ── Answer Selection ──────────────────────────────────────────────────────────
 
 function selectAnswer(key) {
   if (state.submitted) return;
+  if (isHistoryMode()) return; // locked when reviewing past answers
   state.selectedAnswer = key;
 
   document.querySelectorAll('.answer-btn').forEach(btn => {
@@ -154,6 +233,11 @@ function submitAnswer() {
 
   const q       = currentQuestion();
   const correct = state.selectedAnswer === q.answer;
+
+  // Record answer history (session only — for the Previous button)
+  if (!state.retryMode) {
+    state.answerHistory[state.currentIndex] = { selected: state.selectedAnswer, correct };
+  }
 
   // Track misses
   if (!correct) {
@@ -218,21 +302,31 @@ function submitAnswer() {
 
 // ── Navigation ────────────────────────────────────────────────────────────────
 
+function prevQuestion() {
+  if (state.viewIndex > 0) {
+    state.viewIndex--;
+    renderQuestion();
+  }
+}
+
 function nextQuestion() {
+  // If browsing history, just step forward — don't advance the frontier
+  if (isHistoryMode()) {
+    state.viewIndex++;
+    renderQuestion();
+    return;
+  }
   state.retryMode ? advanceRetry() : advanceNormal();
 }
 
 function advanceNormal() {
   if (state.currentIndex >= state.questions.length - 1) {
-    // Finished the chapter
-    if (state.retryQueue.length === 0) {
-      showCompletion();
-    } else {
-      enterRetryMode();
-    }
+    // Finished all 99 questions
+    showScoreSummary();
     return;
   }
   state.currentIndex++;
+  state.viewIndex = state.currentIndex;
   localStorage.setItem(STORAGE_KEY, state.currentIndex);
   renderQuestion();
 }
@@ -265,6 +359,29 @@ function advanceRetry() {
   renderQuestion();
 }
 
+// ── Score Summary ─────────────────────────────────────────────────────────────
+
+function showScoreSummary() {
+  const total   = state.questions.length;
+  const wrong   = state.retryQueue.length;
+  const correct = total - wrong;
+
+  document.getElementById('score-text').textContent = `You got ${correct} of ${total} correct.`;
+
+  if (wrong > 0) {
+    document.getElementById('score-subtext').textContent =
+      `${wrong} question${wrong !== 1 ? 's' : ''} to review.`;
+    document.getElementById('score-continue-label').textContent = 'Review Missed Questions';
+  } else {
+    document.getElementById('score-subtext').textContent = 'Perfect score! Amazing work, David.';
+    document.getElementById('score-continue-label').textContent = 'Chapter Complete!';
+  }
+
+  if (window.speechSynthesis.speaking) window.speechSynthesis.cancel();
+  document.getElementById('quiz-container').classList.add('hidden');
+  document.getElementById('score-screen').classList.remove('hidden');
+}
+
 // ── Completion & Reset ────────────────────────────────────────────────────────
 
 function showCompletion() {
@@ -272,6 +389,7 @@ function showCompletion() {
   localStorage.removeItem(STORAGE_RETRY_KEY);
   if (window.speechSynthesis.speaking) window.speechSynthesis.cancel();
   document.getElementById('quiz-container').classList.add('hidden');
+  document.getElementById('score-screen').classList.add('hidden');
   document.getElementById('completion-screen').classList.remove('hidden');
 }
 
@@ -282,9 +400,11 @@ function startOver() {
 
   Object.assign(state, {
     currentIndex:   0,
+    viewIndex:      0,
     selectedAnswer: null,
     submitted:      false,
     speaking:       false,
+    answerHistory:  {},
     retryQueue:     [],
     retryMode:      false,
     retryIndex:     0,
@@ -292,6 +412,7 @@ function startOver() {
   });
 
   document.getElementById('completion-screen').classList.add('hidden');
+  document.getElementById('score-screen').classList.add('hidden');
   document.getElementById('quiz-container').classList.remove('hidden');
   renderQuestion();
 }
@@ -365,6 +486,7 @@ function updateReadAloudBtn() {
 document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('submit-btn').addEventListener('click', submitAnswer);
   document.getElementById('next-btn').addEventListener('click', nextQuestion);
+  document.getElementById('prev-btn').addEventListener('click', prevQuestion);
   document.getElementById('read-aloud-btn').addEventListener('click', readAloud);
   document.getElementById('start-over-btn').addEventListener('click', () => {
     if (confirm('Start over from Question 1? Progress and missed questions will be cleared.')) {
@@ -372,6 +494,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
   document.getElementById('completion-start-over-btn').addEventListener('click', startOver);
+  document.getElementById('score-continue-btn').addEventListener('click', () => {
+    document.getElementById('score-screen').classList.add('hidden');
+    document.getElementById('quiz-container').classList.remove('hidden');
+    if (state.retryQueue.length === 0) {
+      showCompletion();
+    } else {
+      enterRetryMode();
+    }
+  });
 
   document.getElementById('voice-select').addEventListener('change', e => {
     localStorage.setItem(STORAGE_VOICE_KEY, e.target.value);
@@ -379,7 +510,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Refresh voice list when dropdown is opened — catches newly downloaded voices
   document.getElementById('voice-select').addEventListener('focus', populateVoices);
-
 
   // Voices load asynchronously — voiceschanged fires on desktop Chrome/Firefox,
   // but iOS won't provide voices until after a user gesture.
