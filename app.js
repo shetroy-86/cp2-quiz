@@ -380,12 +380,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // Refresh voice list when dropdown is opened — catches newly downloaded voices
   document.getElementById('voice-select').addEventListener('focus', populateVoices);
 
-  document.getElementById('debug-voices-btn').addEventListener('click', () => {
-    const voices = window.speechSynthesis.getVoices();
-    alert(voices.length === 0
-      ? 'No voices found.'
-      : voices.map(v => `${v.name} (${v.lang})`).join('\n'));
-  });
 
   // Voices load asynchronously — voiceschanged fires on desktop Chrome/Firefox,
   // but iOS won't provide voices until after a user gesture.
