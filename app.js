@@ -1,5 +1,6 @@
 const STORAGE_KEY       = 'cp2_progress_ch1';  // current question index (or sentinel 99 = retry mode)
 const STORAGE_RETRY_KEY = 'cp2_retry_ch1';     // JSON array of question indices to retry
+const STORAGE_VOICE_KEY = 'cp2_voice';         // preferred voice name
 
 const state = {
   questions:     [],
@@ -295,6 +296,40 @@ function startOver() {
   renderQuestion();
 }
 
+// ── Voice Picker ──────────────────────────────────────────────────────────────
+
+function populateVoices() {
+  const select = document.getElementById('voice-select');
+  const saved  = localStorage.getItem(STORAGE_VOICE_KEY);
+
+  let voices = window.speechSynthesis.getVoices().filter(v => v.lang.startsWith('en'));
+  if (voices.length === 0) voices = window.speechSynthesis.getVoices(); // fallback: show all
+
+  select.innerHTML = '';
+  voices.forEach(v => {
+    const opt = document.createElement('option');
+    opt.value = v.name;
+    // Clean up long Windows/Google voice names for readability
+    opt.textContent = v.name
+      .replace('Microsoft ', '')
+      .replace(/ - English \(.*?\)/, '')
+      .replace(/ Online \(Natural\)/, ' (Natural)');
+    if (v.name === saved) opt.selected = true;
+    select.appendChild(opt);
+  });
+
+  // If nothing matched the saved preference, save whatever is now selected
+  if (!saved && select.options.length > 0) {
+    localStorage.setItem(STORAGE_VOICE_KEY, select.value);
+  }
+}
+
+function selectedVoice() {
+  const name   = document.getElementById('voice-select').value;
+  const voices = window.speechSynthesis.getVoices();
+  return voices.find(v => v.name === name) || null;
+}
+
 // ── Read Aloud ────────────────────────────────────────────────────────────────
 
 function readAloud() {
@@ -311,6 +346,8 @@ function readAloud() {
 
   const utterance  = new SpeechSynthesisUtterance(text);
   utterance.rate   = 0.85;
+  const voice = selectedVoice();
+  if (voice) utterance.voice = voice;
   utterance.onend  = () => { state.speaking = false; updateReadAloudBtn(); };
   utterance.onerror = () => { state.speaking = false; updateReadAloudBtn(); };
 
@@ -336,6 +373,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
   document.getElementById('completion-start-over-btn').addEventListener('click', startOver);
+
+  document.getElementById('voice-select').addEventListener('change', e => {
+    localStorage.setItem(STORAGE_VOICE_KEY, e.target.value);
+  });
+
+  // Voices load asynchronously in most browsers
+  window.speechSynthesis.addEventListener('voiceschanged', populateVoices);
+  populateVoices(); // also try immediately (works in Firefox)
 
   loadQuestions();
 });

@@ -109,10 +109,13 @@
         <!-- Card Header -->
         <div class="flex justify-between items-start mb-6">
           <span id="chapter-badge" class="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold tracking-widest uppercase">Chapter 1</span>
-          <button id="read-aloud-btn" class="flex items-center gap-2 px-4 py-2 bg-surface-container-high rounded-full text-primary hover:bg-surface-container-highest transition-all duration-300 active:scale-95" title="Read aloud">
-            <span class="material-symbols-outlined text-xl leading-none">volume_up</span>
-            <span class="text-sm font-medium hidden sm:inline">Read Aloud</span>
-          </button>
+          <div class="flex flex-col items-end gap-2">
+            <button id="read-aloud-btn" class="flex items-center gap-2 px-4 py-2 bg-surface-container-high rounded-full text-primary hover:bg-surface-container-highest transition-all duration-300 active:scale-95" title="Read aloud">
+              <span class="material-symbols-outlined text-xl leading-none">volume_up</span>
+              <span class="text-sm font-medium hidden sm:inline">Read Aloud</span>
+            </button>
+            <select id="voice-select" class="bg-surface-container-highest text-on-surface-variant text-xs rounded-lg px-2 py-1 border-0 outline-none cursor-pointer hover:text-on-surface transition-colors" title="Select voice"></select>
+          </div>
         </div>
 
         <!-- Question Text -->
