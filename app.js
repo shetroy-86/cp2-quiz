@@ -64,6 +64,7 @@ function isHistoryMode() {
 // ── Render ────────────────────────────────────────────────────────────────────
 
 function renderQuestion() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
   const q     = currentQuestion();
   const total = state.questions.length;
 
